@@ -1,9 +1,13 @@
-# 特定の拡張子は無視
+# 無視する拡張子
 *.dll
 *.exe
 *.json
 *.pdb
 
-#特定のフォルダは無視
+#無視するフォルダ
 .vs/
 src/obj/
+
+#無視しないファイル
+!DxLibW_x64.dll
+!DxLibWDotNet.dll

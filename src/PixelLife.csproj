@@ -8,4 +8,10 @@
     <BaseOutputPath>C:\Users\hatof\Desktop\PixelLife\build</BaseOutputPath>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="DxLibWDotNet">
+      <HintPath>..\build\Debug\net6.0-windows\DxLibWDotNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
