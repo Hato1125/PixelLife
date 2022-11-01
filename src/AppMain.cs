@@ -14,11 +14,11 @@ internal class AppMain
 
     void Initializer()
     {
+        DX.SetOutApplicationLogValidFlag(DX.FALSE);
         DX.GetDefaultState(out int w, out int h, out int _, out int _, out int _, out int _, out int _, out int _, out int _, out int _);
         float sizeScale = w / AppInfo.CliantSize.Width;
         int width = (int)(AppInfo.CliantSize.Width * sizeScale);
         int height = (int)(AppInfo.CliantSize.Height * sizeScale);
-        DX.SetOutApplicationLogValidFlag(DX.FALSE);
         DX.SetUseFPUPreserveFlag(DX.TRUE);
         DX.SetFontUseAdjustSizeFlag(DX.FALSE);
         DX.SetGraphMode(AppInfo.CliantSize.Width, AppInfo.CliantSize.Height, 32);
