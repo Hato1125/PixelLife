@@ -5,10 +5,23 @@ internal class Mouse
     private readonly sbyte[] value = new sbyte[7];
 
     /// <summary>
+    /// 現在のマウスのX座標
+    /// </summary>
+    public int X { get; private set; }
+
+    /// <summary>
+    /// 現在のマウスのY座標
+    /// </summary>
+    public int Y { get; private set; }
+
+    /// <summary>
     /// 更新
     /// </summary>
     public void Update()
     {
+        DX.GetMousePoint(out int mx, out int my);
+        (X, Y) = (mx, my);
+
         for (int i = 0; i < value.Length; i++)
         {
             if (DX.GetMouseInput() == (int)GetKeyCode(i))
