@@ -26,6 +26,11 @@ internal class Button : Control, IDisposable
     public int BlurOpacity { get; set; }
 
     /// <summary>
+    /// 縁取りの透明度
+    /// </summary>
+    public int EdgeOpacity { get; set; }
+
+    /// <summary>
     /// 画像アイコンの余白
     /// </summary>
     public (int Left, int Top) IconPadding { get; set; }
@@ -89,6 +94,7 @@ internal class Button : Control, IDisposable
         this.Radius = 10.0f;
         this.EdgeSize = 2.0f;
         this.BlurOpacity = 150;
+        this.EdgeOpacity = 100;
         BackColor = Color.FromArgb(28, 28, 30);
         ForeColor = Color.FromArgb(255, 255, 255);
         EdgeColor = Color.FromArgb(158, 157, 159);
@@ -224,7 +230,7 @@ internal class Button : Control, IDisposable
         DX.SetMaskReverseEffectFlag(DX.TRUE);
         DX.SetDrawScreen(_mask);
         DX.ClearDrawScreen();
-        DX.DrawRoundRectAA(0, 0, Width, Height, Radius, Radius, 255, 0x000000, DX.TRUE);
+        DX.DrawRoundRectAA(0, 0, Width, Height, Radius, Radius, 255, 0xffffff, DX.TRUE);
         DX.SetDrawScreen(nowScreen);
 
         DX.SetUseMaskScreenFlag(DX.TRUE);
@@ -239,12 +245,11 @@ internal class Button : Control, IDisposable
 
         DX.DrawBox(0, 0, Width, Height, backColor, DX.TRUE);
 
-        if (EdgeSize > 0)
-            DrawEdge();
-
         DX.SetDrawBlendMode(DX.DX_BLENDMODE_NOBLEND, 0);
 
         DrawFade();
+        if (EdgeSize > 0)
+            DrawEdge();
 
         DX.SetUseMaskScreenFlag(DX.FALSE);
 
@@ -264,7 +269,9 @@ internal class Button : Control, IDisposable
     void DrawEdge()
     {
         uint edgeColor = DX.GetColor(EdgeColor.R, EdgeColor.G, EdgeColor.B);
+        DX.SetDrawBlendMode(DX.DX_BLENDMODE_ALPHA, EdgeOpacity);
         DX.DrawRoundRectAA(0, 0, Width, Height, Radius + EdgeSize / 2, Radius + EdgeSize / 2, 255, edgeColor, DX.FALSE, EdgeSize * 2);
+        DX.SetDrawBlendMode(DX.DX_BLENDMODE_NOBLEND, 0);
     }
 
     // 文字をレンダリングする
