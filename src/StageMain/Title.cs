@@ -12,6 +12,7 @@ internal class Title : SceneBase
     public override void Init()
     {
         _sceneIndex = 0;
+        titleLogic.Init();
         titleVeiw.Init();
 
         base.Init();

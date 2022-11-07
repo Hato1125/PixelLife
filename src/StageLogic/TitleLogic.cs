@@ -1,11 +1,18 @@
 namespace PixelLife.Logic;
 
-internal class TitleLogic
+internal class TitleLogic : ILogic
 {
     private double _fadeCounter;
     private string[] _sceneName = new string[3] { "Select", "Setting", "Exit" };
     public int FadeOpacity { get; private set; }
     public bool IsFade { get; set; }
+
+    public void Init()
+    {
+        _fadeCounter = 0;
+        FadeOpacity = 0;
+        IsFade = false;
+    }
 
     public void FadeCountTick()
     {
