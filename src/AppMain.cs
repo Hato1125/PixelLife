@@ -2,8 +2,6 @@ global using System.Drawing;
 global using System.Diagnostics;
 global using DxLibDLL;
 
-using PixelLife.Presenter;
-
 namespace PixelLife;
 
 internal class AppMain
