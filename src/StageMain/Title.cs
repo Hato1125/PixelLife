@@ -9,6 +9,11 @@ internal class Title : SceneBase
     private readonly TitleView titleVeiw = new();
     private int _sceneIndex;
 
+    public Title()
+    {
+        Child.Add(new Title_Logo());
+    }
+
     public override void Init()
     {
         _sceneIndex = 0;

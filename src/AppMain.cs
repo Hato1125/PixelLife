@@ -11,6 +11,7 @@ internal class AppMain
     public static readonly AppMain Instans = new();
     public static TimeSpan Time = TimeSpan.Zero;
     public static readonly SceneManeger Scene = new();
+    public static readonly GraphLoad Graph = new();
 
     private AppMain()
     {
@@ -34,6 +35,7 @@ internal class AppMain
         if (DX.DxLib_Init() == -1)
             throw new Exception("DxLibの初期化に失敗しました。");
         DX.CreateMaskScreen();
+        Graph.Load();
 
         Scene.AddScene("Title", new Title());
 

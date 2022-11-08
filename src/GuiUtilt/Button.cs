@@ -132,7 +132,7 @@ internal class Button : Control, IDisposable
     }
 
     /// <summary>
-    /// ボタンをセイセする
+    /// ボタンを生成する
     /// </summary>
     /// <param name="width">横幅</param>
     /// <param name="height">高さ</param>
