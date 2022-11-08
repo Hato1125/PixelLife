@@ -5,7 +5,7 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <BaseOutputPath>C:\Users\mepur\OneDrive\デスクトップ\PixelLife\build</BaseOutputPath>
+    <BaseOutputPath>..\build</BaseOutputPath>
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
 

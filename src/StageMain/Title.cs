@@ -1,12 +1,12 @@
 using PixelLife.Logic;
-using PixelLife.Veiw;
+using PixelLife.View;
 
 namespace PixelLife;
 
 internal class Title : SceneBase
 {
     private readonly TitleLogic titleLogic = new();
-    private readonly TitleVeiw titleVeiw = new();
+    private readonly TitleView titleVeiw = new();
     private int _sceneIndex;
 
     public override void Init()

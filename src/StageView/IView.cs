@@ -1,6 +1,6 @@
-namespace PixelLife.Veiw;
+namespace PixelLife.View;
 
-internal interface IVeiw
+internal interface IView
 {
     void Init();
     void Update();

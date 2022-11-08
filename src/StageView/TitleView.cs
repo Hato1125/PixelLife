@@ -1,8 +1,8 @@
 using PixelLife.Gui;
 
-namespace PixelLife.Veiw;
+namespace PixelLife.View;
 
-internal class TitleVeiw : IVeiw
+internal class TitleView : IView
 {
     private const int GUI_WIDTH = 295;
     private const int GUI_HEIGHT = 65;
