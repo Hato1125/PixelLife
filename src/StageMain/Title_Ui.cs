@@ -21,7 +21,7 @@ internal class Title_Ui : SceneBase
         titleVeiw.Update();
 
         for (int i = 0; i < titleVeiw.Alignment.Controls.Count(); i++)
-            if (titleVeiw.Alignment.Controls[i].IsClicked())
+            if (titleVeiw.Alignment.Controls[i].IsClickUp())
             {
                 _sceneIndex = i;
                 titleLogic.IsFade = true;
@@ -39,5 +39,6 @@ internal class Title_Ui : SceneBase
 
     public override void Finish()
     {
+        titleVeiw.Finish();
     }
 }

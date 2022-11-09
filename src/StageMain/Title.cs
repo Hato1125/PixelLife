@@ -7,6 +7,7 @@ internal class Title : SceneBase
 {
     public Title()
     {
+        Child.Add(new Title_Back());
         Child.Add(new Title_Logo());
         Child.Add(new Title_Ui());
     }

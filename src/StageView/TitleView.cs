@@ -24,6 +24,8 @@ internal class TitleView : IView
             _buttons[i].BackColor = Color.FromArgb(10, 10, 10);
             _buttons[i].EdgeColor = Color.FromArgb(0, 0, 0);
             _buttons[i].ForeColor = Color.FromArgb(255, 255, 255);
+            _buttons[i].EdgeSize = 2f;
+            _buttons[i].IsBlur = true;
             _buttons[i].Text = _texts[i];
             _buttons[i].BlurOpacity = 20;
             _buttons[i].EdgeOpacity = 50;
@@ -42,5 +44,10 @@ internal class TitleView : IView
     public void Draw()
     {
         Alignment.Draw();
+    }
+
+    public void Finish()
+    {
+        Alignment.Dispose();
     }
 }
