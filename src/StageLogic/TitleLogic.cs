@@ -39,7 +39,6 @@ internal class TitleLogic : ILogic
         if (FadeOpacity < 255)
             return;
 
-        Console.WriteLine("Change");
         // NOTE: まだTitle以外実装していないのでコメントアウト
         //AppMain.Scene.ChangeScene(_sceneName[index]);
     }
