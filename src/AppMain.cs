@@ -70,6 +70,7 @@ internal class AppMain
             Update();
             Render();
             DX.ScreenFlip();
+            DX.SetWindowText(DX.GetFPS().ToString("#0"));
             Time = stopwatch.Elapsed;
         }
         Uninitializer();

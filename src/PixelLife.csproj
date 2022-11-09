@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <BaseOutputPath>..\build</BaseOutputPath>
@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <Reference Include="DxLibWDotNet">
-      <HintPath>..\build\Debug\net6.0-windows\DxLibWDotNet.dll</HintPath>
+      <HintPath>..\build\Debug\net7.0-windows\DxLibWDotNet.dll</HintPath>
     </Reference>
   </ItemGroup>
 

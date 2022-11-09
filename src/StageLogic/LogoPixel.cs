@@ -70,8 +70,6 @@ internal class LogoPixel
         else
             Y -= value;
 
-            Console.WriteLine($"X:{X}, Y:{Y}");
-
         _ctOpacity = Y * (180.0 / _yMax);
         Opacity = Math.Sin(Math.Abs(_ctOpacity) * Math.PI / 180) * 255;
     }
